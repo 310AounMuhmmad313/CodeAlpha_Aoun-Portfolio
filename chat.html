@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aoun Muhammad Balti – Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 70px 10%;
+        }
+
+        .hero {
+            height: 100vh;
+            padding: 0 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), #0a0a0a), url("CD.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            color: gold;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 15px;
+            color: #ccc;
+        }
+
+        .hero-img {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 3px solid gold;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 35px;
+            background: gold;
+            color: black;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: gold;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            background: #111;
+            padding: 25px;
+            border-left: 5px solid gold;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .project {
+            background: #141414;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid gold;
+            border-radius: 6px;
+        }
+
+        .contact-container {
+            padding: 50px 0;
+        }
+
+        .contact-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px 20px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            transition: 0.4s;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 215, 0, 0.05);
+            border-color: gold;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 40px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .contact-item h3 {
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            color: #888;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .contact-link {
+            color: gold;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid gold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact-link:hover {
+            background: gold;
+            color: black;
+        }
+
+        footer {
+            padding: 40px 10%;
+            background: #000;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        .footer-content p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+        }
+
+        .footer-links a {
+            color: gold;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Aoun Muhammad <br>Balti</h1>
+            <p>Frontend Web Developer | Class 8 Student</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+        <div class="hero-img">
+            <img src="aoun.png" alt="Aoun Muhammad">
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="box">
+            <p>
+                I am a passionate frontend web developer and a Class 8 student.
+                I enjoy building clean, responsive, and user-friendly websites using
+                HTML and CSS. Currently, I am learning JavaScript step by step and
+                improving my problem-solving skills through practice projects.
+                My goal is to become a professional web developer in the future, InshaAllah.
+            </p>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="box">
+            <p>✔ HTML5 – Page structure & layouts</p>
+            <p>✔ CSS3 – Styling, Flexbox, Responsive Design</p>
+            <p>✔ JavaScript – Basics, loops & DOM manipulation</p>
+            <p>✔ GSAP – Basic animations</p>
+            <p>✔ GitHub – Uploading & managing projects</p>
+        </div>
+    </section>
+    <section id="experience">
+        <h2>Learning Experience</h2>
+        <div class="box">
+            <p>
+                I have practiced frontend development by building small projects
+                such as landing pages, portfolio designs, and basic JavaScript apps.
+                Through continuous learning and practice, I am improving my UI design
+                and coding skills.
+            </p>
+        </div>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="box">
+            <h3>Bahria Sub-e-Nau School</h3>
+            <p>Class 8 Student • Continuing Studies</p>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Balti WhatsApp (Firebase Chat App)</h3>
+            <p>
+                Real-time chat web application built with Firebase.
+                Features include user signup/login, one-to-one messaging,
+                voice recording, image & video sharing, and live updates.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Gradient Generator</h3>
+            <p>
+                CSS Gradient Generator tool that allows users to create
+                linear gradients, preview colors live, and copy CSS code.
+                Built using HTML, CSS, and JavaScript.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Weather App</h3>
+            <p>
+                Simple weather app created to practice JavaScript and API usage.
+                Displays weather information based on city input.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Table Generator</h3>
+            <p>
+                JavaScript-based table generator using loops to improve logic
+                and understanding of basic programming concepts.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Digital Clock</h3>
+            <p>
+                Real-time digital clock created using JavaScript Date object
+                to understand time functions and intervals.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Landing Page Fbric Website</h3>
+            <p>Clean landing page with hover effects usin HTML , CSS AND GSAP ANIMATION.</p>
+        </div>
+        </div>
+        <div class="project">
+            <h3>Fake Store API Project</h3>
+            <p>
+                Practice project using JavaScript to display products,
+                implement search functionality, and category filtering.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>Todo App</h3>
+            <p>
+                Simple todo management app with clean UI and local storage
+                to save user tasks.
+            </p>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-container">
+            <h2 style="text-align: center; width: 100%;">Let's Connect</h2>
+            <div class="contact-card">
+                <div class="contact-item">
+                    <span class="icon">📧</span>
+                    <h3>Email</h3>
+                    <p>amaastore310@gmail.com</p>
+                    <a href="mailto:amaastore310@gmail.com" class="contact-link">Send Mail</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">💬</span>
+                    <h3>WhatsApp</h3>
+                    <p>03132599565</p>
+                    <a href="https://wa.me/923132599565" class="contact-link">Chat Now</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">🔗</span>
+                    <h3>GitHub</h3>
+                    <p>310AounMuhmmad313</p>
+                    <a href="https://github.com/310AounMuhmmad313" class="contact-link">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Aoun Muhammad Balti | Student & Developer</p>
+            <div class="footer-links">
+                <a href="#">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".hero-content", { opacity: 0, x: -100, duration: 1.5, ease: "power4.out" });
+        gsap.from(".hero-img", { opacity: 0, x: 100, duration: 1.5, ease: "power4.out", delay: 0.2 });
+        gsap.utils.toArray("h2").forEach(title => {
+            gsap.from(title, {
+                scrollTrigger: title,
+                opacity: 0,
+                x: -50,
+                duration: 1
+            });
+        });
+        gsap.utils.toArray(".box, .project").forEach(box => {
+            gsap.from(box, {
+                scrollTrigger: box,
+                opacity: 0,
+                y: 40,
+                duration: 0.8
+            });
+        });
+    </script>
+
+</body>
+
+</html>
